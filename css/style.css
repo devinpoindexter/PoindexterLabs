@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+  font-family: 'Overpass', sans-serif;
+}
+
+h3 {
+  font-weight: 900;
+  color: #0077AF;
+  /* font-size: 36px; */
+  letter-spacing: 0.05em;
+
+}
+
+h1 {
+  font-weight: bold;
+  /* font-size: 80px; */
+  color: #6EC4C5;
+}
+
+.services-title p {
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  color: #004566;
+  padding-bottom: 10px;
+}
+.service:nth-child(1) .service-name::before {
+  content: url(../branding.svg);
+  vertical-align: middle;
+  padding-right:1rem;
+}
+
+.service:nth-child(2) .service-name::before {
+  content: url(../development.svg);
+  vertical-align: middle;
+  padding-right:1rem;
+  width: 2rem;
+
+}
+
+.service:nth-child(3) .service-name::before {
+  content: url(../strategy.svg);
+  vertical-align: middle;
+  padding-right:1rem;
+
+}
+
+.service-name {
+  font-size:2.5em;
+}
+
+.service-desc {
+  margin-left: 70px;
+  color: #CCEFFF;
+  text-align: justify;
+}
+
 .mr-auto, .mx-auto {
     margin-right: auto!important;
 }
@@ -87,7 +145,7 @@
     flex-direction: column;
     text-align: center;
     position: relative;
-    height: 70vh;
+    height: 85vh;
     padding-top: 60px;
 }
 
@@ -199,4 +257,30 @@
     border-radius: 50%;
     border: 5px solid #0077AF;
     display: inline-block;
+}
+
+.btn-lets-talk {
+    border: 2px solid #CCEFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #CCEFFF;
+    text-decoration: none;
+    padding:10px 60px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+
+.btn-see-our-work {
+  border: 2px solid #6EC4C5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #6EC4C5;
+  text-decoration: none;
+  padding:10px 60px;
+  font-size: 1rem;
+  text-align: center;
+  margin: auto;  
 }
