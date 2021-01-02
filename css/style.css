@@ -51,7 +51,6 @@ h1 {
 }
 
 .service-desc {
-  margin-left: 70px;
   color: #CCEFFF;
   text-align: justify;
 }
@@ -273,6 +272,11 @@ h1 {
     
 }
 
+.btn-lets-talk:hover {
+  background-color: rgb(0, 0, 0, .1);
+  color: #CCEFFF;
+}
+
 .btn-see-our-work {
   border: 2px solid #6EC4C5;
   box-sizing: border-box;
@@ -283,4 +287,9 @@ h1 {
   font-size: 1rem;
   text-align: center;
   margin: auto;  
+}
+
+.btn-see-our-work:hover {
+  color: #6EC4C5;
+  background-color: rgba(0, 119, 175, .1);
 }
