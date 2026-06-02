@@ -8,6 +8,30 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="css/style.css">
         <!-- <link rel="stylesheet" href="css/fontawesome-all.min.css"> -->
+        <style>
+          @keyframes bounce-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+          }
+          .scroll-arrow {
+            display: block;
+            margin-top: 24px;
+            text-align: center;
+            animation: bounce-down 1.2s ease-in-out infinite;
+            cursor: pointer;
+            text-decoration: none;
+          }
+          .scroll-arrow svg {
+            width: 36px;
+            height: 36px;
+            stroke: #6EC4C5;
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+        </style>
+        <!-- contact: aW5mby1ub3JlcGx5QHBvaW5kZXh0ZXJsYWJzLmNvbQ== -->
       
     </head>
     <body>
@@ -17,7 +41,7 @@
         
               <div class="logo mr-auto">
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="index.html"><img src="templogoText4.png" alt="" class="img-fluid"></a>
+                <a href="index2.html"><img src="logo2.png" alt="" class="img-fluid" width="150px"></a>
               </div>
               <nav class="navbar navbar-expand-lg nav-menu">
                 <div class="container-fluid">
@@ -26,21 +50,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown">Drop Down</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-item"><a  href="#">Drop Down 1</a></li>
-                            <li class="dropdown-item"><a href="#">Drop Down 2</a></li>
-                            <li class="dropdown-item"><a href="#">Drop Down 3</a></li>
-                            <li class="dropdown-item"><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="contact-link" href="mailto:contact@example.com">Contact</a></li>
             
                     </ul>
                 </div>
@@ -61,7 +71,12 @@
                   <div class="row">
                     <div class="col-12"><h1 class="animate__animated animate__fadeInDown">Build. Better.  Businesses.</h1></div>
                     <div style="margin-top: 50px;" class="col-12">
-                      <a href="#" class="btn-see-our-work">SEE OUR WORK</a>
+                      <a href="#section1" class="btn-see-our-work">WHAT WE DO</a>
+                      <a href="#section1" class="scroll-arrow" aria-label="Scroll to services">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </a>
                     </div>
                     <!--Brands/Development/Consulting-->
                   </div>
@@ -99,24 +114,23 @@
         
                 <div class="row content aos-init aos-animate" data-aos="fade-up" style="padding-bottom: 50px;;">
                   <div class="col-lg-6">
-                    <!-- <p>
-                      We offer creative and strategy services to help make businesses better. We build brands, optimize operations, and turn ideas into reality. Our specialty is simultaneously improving customer experience and business profitability.
-                    </p> -->
                       <div class="service">
-                        <h4 class="service-name">Branding</h4>
-                        <p class="service-desc">A brand is more than a logo or slogan, its an experience.  We tailor your marketing materials & messaging to tell your business’ s story.</p>
+                        <h4 class="service-name">Business Consulting</h4>
+                        <ul class="service-desc">
+                          <li>Financial Strategy</li>
+                          <li>Margin &amp; Cost Modeling</li>
+                          <li>Process Design &amp; Implementation</li>
+                        </ul>
                       </div>
 
                       <div class="service">
-                        <h4 class="service-name">Development</h4>
-                        <p class="service-desc">Landing pages, shopping carts, API integration, custom business logic, and more. Whatever your online presence requires, we can build it.</p>
+                        <h4 class="service-name">Technology Consulting</h4>
+                        <ul class="service-desc">
+                          <li>AI Implementation &amp; Training</li>
+                          <li>Business Automation</li>
+                          <li>Software Integration</li>
+                        </ul>
                       </div>
-
-                      <div class="service">
-                        <h4 class="service-name">Strategy</h4>
-                        <p class="service-desc">Our strategy is to save you time and money. That means optimizing operations, providing financial insights, and automating your infrastructure.</p>
-                      </div>
-
                   </div>
                   <div class="col-lg-6 pt-4 pt-lg-0">
                     <img
@@ -137,6 +151,28 @@
           </main>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script>
+          // Real email assembled only at click time; decoy address sits in the href.
+          var _ec = [104,101,108,108,111,64,112,111,105,110,100,101,120,116,101,114,108,97,98,115,46,99,111,109];
+          document.addEventListener('DOMContentLoaded', function() {
+            var link = document.getElementById('contact-link');
+            if (link) {
+              var revealRealHref = function() {
+                var realHref = 'mailto:' + _ec.map(function(c) {
+                  return String.fromCharCode(c);
+                }).join('');
+
+                link.href = realHref;
+                return realHref;
+              };
+
+              link.addEventListener('pointerenter', revealRealHref, { once: true });
+              link.addEventListener('focus', revealRealHref, { once: true });
+              link.addEventListener('touchstart', revealRealHref, { once: true });
+              link.addEventListener('click', revealRealHref);
+            }
+          });
+        </script>
 
 
     </body>
