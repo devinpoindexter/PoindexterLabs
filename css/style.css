@@ -293,3 +293,16 @@ h1 {
   color: #6EC4C5;
   background-color: rgba(0, 119, 175, .1);
 }
+
+.site-footer {
+  background-color: #004566;
+  color: #CCEFFF;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
