@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="color-scheme" content="light">
+      <meta name="description" content="Poindexter Labs helps businesses improve operations through business and technology consulting.">
+        <meta name="robots" content="index, follow">
         <title>Poindexter Labs | Empowering Innovation</title>
         <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="css/style.css">
         <!-- <link rel="stylesheet" href="css/fontawesome-all.min.css"> -->
         <style>
@@ -31,26 +33,25 @@
             stroke-linejoin: round;
           }
         </style>
-        <!-- contact: aW5mby1ub3JlcGx5QHBvaW5kZXh0ZXJsYWJzLmNvbQ== -->
-      
     </head>
     <body>
+        <a class="skip-link" href="#main">Skip to main content</a>
 <!-- Header & Navigation-->
         <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container d-flex align-items-center">
         
               <div class="logo mr-auto">
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="index2.html"><img src="logo2.png" alt="" class="img-fluid" width="150px"></a>
+                <a href="index.html"><img src="logo2.png" alt="Poindexter Labs" class="img-fluid" width="150px"></a>
               </div>
-              <nav class="navbar navbar-expand-lg nav-menu">
+              <nav class="navbar navbar-expand-lg nav-menu" aria-label="Primary">
                 <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" id="contact-link" href="mailto:contact@example.com">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="contact-link" data-email-link href="mailto:contact@example.com">Contact</a></li>
             
                     </ul>
                 </div>
@@ -61,19 +62,19 @@
           </header>
 <!-- Landing-->
 
-          <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+          <section id="hero" class="d-flex flex-column justify-content-end align-items-center" aria-labelledby="hero-heading">
             <div id="heroCarousel" class=" carousel-container container">
                   <div class="container">
               <!-- Slide 1 -->
 
 
-                  <h3 class="animate__animated animate__fadeInDown">OUR MISSION IS SIMPLE </h3>
+                  <p class="hero-eyebrow animate__animated animate__fadeInDown">OUR MISSION IS SIMPLE</p>
                   <div class="row">
-                    <div class="col-12"><h1 class="animate__animated animate__fadeInDown">Build. Better.  Businesses.</h1></div>
+                    <div class="col-12"><h1 id="hero-heading" class="animate__animated animate__fadeInDown">Build. Better.  Businesses.</h1></div>
                     <div style="margin-top: 50px;" class="col-12">
                       <a href="#section1" class="btn-see-our-work">WHAT WE DO</a>
                       <a href="#section1" class="scroll-arrow" aria-label="Scroll to services">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                           <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       </a>
@@ -86,7 +87,7 @@
             </div>
 <!-- Waves-->
         
-            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none" aria-hidden="true" focusable="false">
               <defs>
                 <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
               </path></defs>
@@ -104,12 +105,12 @@
 <!-- Services -->
 
           </section>
-          <main id="main">
-            <section id="section1" class="about">
+          <main id="main" tabindex="-1">
+            <section id="section1" class="about" aria-labelledby="services-heading">
               <div class="container">
 
                 <div class="services-title" >
-                  <p>SERVICES</p>
+                  <h2 id="services-heading">SERVICES</h2>
                 </div>
         
                 <div class="row content aos-init aos-animate" data-aos="fade-up" style="padding-bottom: 50px;;">
@@ -139,9 +140,9 @@
                       alt="Branding and Strategy Graphic"
                       height="300"
                       width="400" />
-                    </br >
+                    <br>
                     <div style="width: 100%; display: flex;">
-                      <a href="#" class="btn-lets-talk">LET'S TALK</a>
+                      <a href="mailto:contact@example.com" class="btn-lets-talk" data-email-link>LET'S TALK</a>
                     </div>
                   </div>
                 </div>
@@ -152,35 +153,38 @@
           <footer class="site-footer">
             <div class="container">
               <p>Copyright &copy; Poindexter Labs, LLC 2020-<span id="current-year">2026</span></p>
+              <p class="site-footer-links"><a href="privacy.html">Privacy Notice</a> <span aria-hidden="true">|</span> <a href="accessibility.html">Accessibility Statement</a></p>
+              <p class="site-footer-note">This site does not use cookies, analytics, or contact forms.</p>
             </div>
           </footer>
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script>
           // Real email assembled only at click time; decoy address sits in the href.
           var _ec = [104,101,108,108,111,64,112,111,105,110,100,101,120,116,101,114,108,97,98,115,46,99,111,109];
           document.addEventListener('DOMContentLoaded', function() {
-            var link = document.getElementById('contact-link');
             var year = document.getElementById('current-year');
+            var emailLinks = document.querySelectorAll('[data-email-link]');
 
             if (year) {
               year.textContent = new Date().getFullYear();
             }
 
-            if (link) {
+            if (emailLinks.length) {
               var revealRealHref = function() {
                 var realHref = 'mailto:' + _ec.map(function(c) {
                   return String.fromCharCode(c);
                 }).join('');
 
-                link.href = realHref;
+                this.href = realHref;
                 return realHref;
               };
 
-              link.addEventListener('pointerenter', revealRealHref, { once: true });
-              link.addEventListener('focus', revealRealHref, { once: true });
-              link.addEventListener('touchstart', revealRealHref, { once: true });
-              link.addEventListener('click', revealRealHref);
+              emailLinks.forEach(function(link) {
+                link.addEventListener('pointerenter', revealRealHref, { once: true });
+                link.addEventListener('focus', revealRealHref, { once: true });
+                link.addEventListener('touchstart', revealRealHref, { once: true });
+                link.addEventListener('click', revealRealHref);
+              });
             }
           });
         </script>
@@ -188,5 +192,3 @@
 
     </body>
 </html>
-
-<! -- Aside from games and social media, the web browser is still the next most popular app used in 2020. Most users prefer to visit a website vs downloading an app, if they can.-->
